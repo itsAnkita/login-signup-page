@@ -140,7 +140,9 @@ table {
 * {
     box-sizing: border-box;
 }
-
+html {
+    height: 100%;
+}
 body {
     font-family: "Arial", sans-serif;
     font-size: 16px;
@@ -150,16 +152,16 @@ body {
 .wrapper {
     width: 100%;
     background: url("../bckgrnd%202.jpg") center no-repeat;
-    height: 800px;
+    background-size: cover;
+    height: 100%;
 }
 
 .main-wrapper {
     position: absolute;
-    width: 800px;
     height: 450px;
     top: 50%;
     left: 50%;
-    margin-top: -170px;
+    margin-top: -225px;
     margin-left: -400px;
     background-color: rgba(60, 55, 55, 0.8);
     color: #aaa;
