@@ -1,0 +1,371 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    background: url("../bckgrnd%202.jpg") center no-repeat;
+    height: 800px;
+}
+
+.main-wrapper {
+    position: absolute;
+    width: 800px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -400px;
+    background-color: rgba(60, 55, 55, 0.8);
+    color: #aaa;
+    z-index: 999;
+    border-radius: 4px;
+}
+
+.content-wrapper {
+    margin: 100px 25px 50px 25px;
+    padding: 15px;
+    display: inline-block;
+    width: 350px;
+}
+
+.content-wrapper h1 {
+    font-size: 40px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.content-wrapper p {
+    padding: 0 0px 10px 20px;
+    margin-bottom: 25px;
+}
+
+.right-shift {
+    float: right;
+}
+
+.btn-modifier {
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 110px;
+    height: 35px;
+    color: #898a8e;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    background-color: #3c3737;
+    border: 2px solid #898a8e;
+    -webkit-appearance: none;
+}
+
+.main-wrapper:after {
+    content: "";
+    display: block;
+    clear: right;
+}
+.signup {
+    display: none;
+}
+.signup h1 {
+    font-size: 25px;
+    color: #f68b7a;
+    margin: 90px 10px 30px 10px;
+    padding: 5px;
+}
+.signuplogin-wrapper {
+    position: absolute;
+    top: -2.5%;
+    width: 400px;
+    left: 370px;
+    height: 475px;
+    background-color: rgba(254, 254, 254, 1);
+    border-radius: 4px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    padding: 5px;
+}
+.signuplogin-wrapper.login-active {
+        left: 370px;
+    animation-name: loginbox;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+.signuplogin-wrapper.login-active .login{
+    display: block;
+}
+.signuplogin-wrapper.login-active .signup{
+    display: none;
+}
+.signuplogin-wrapper.signup-active {
+        left: 30px;
+    animation-name: signupbox;
+    animation-duration: 0.5s;
+}
+.signuplogin-wrapper.signup-active .signup{
+    display: block;
+}
+.signuplogin-wrapper.signup-active .login{
+    display: none;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes loginbox {
+    0%   {left:30px;}
+    40%  {left:400px;}
+    65%  {left:360px;}
+    90%  {left:380px;}
+    100% {left:370px;}
+}
+
+/* Standard syntax */
+@keyframes loginbox {
+    0%   {left:30px;}
+    40%  {left:400px;}
+    65%  {left:360px;}
+    90%  {left:380px;}
+    100% {left:370px;}
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes signupbox {
+    0%   {left:370px;}
+    40%  {left:0px;}
+    65%  {left:40px;}
+    90% {left:20px;}
+    100% {left:30px;}
+}
+
+/* Standard syntax */
+@keyframes signupbox {
+     0%   {left:370px;}
+    40%  {left:0px;}
+    65%  {left:40px;}
+    90% {left:20px;}
+    100% {left:30px;}
+}
+.login h1 {
+    font-size: 25px;
+    color: #f68b7a;
+    margin-bottom: 30px;
+    margin: 90px 10px 30px 10px;
+    padding: 5px;
+}
+
+.login span {
+    display: inline-block;
+    color: #e1dde1;
+    font-size: 14px;
+    padding-top: 18px;
+    margin-left: 16px;
+}
+
+.input-box {
+    width: 350px;
+    padding: 5px;
+    margin-left: 15px;
+    border: none;
+    border-bottom: 2px solid #e1dde1;
+    color: #e1dde1;
+    padding: 5px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.signup-footer , .login-footer {
+    display: inline-block;
+    margin-right: 24px;
+    float: right;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 110px;
+    height: 35px;
+    color: #f3d9d5;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    background-color: #f18878;
+    border: 2px solid transparent;
+    -webkit-appearance: none;
+}
+
+.login:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.signup.active {
+    display: block;
+}
+
+.login.active {
+    display: block;
+}
